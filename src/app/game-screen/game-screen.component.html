@@ -1,0 +1,48 @@
+<br>
+<form class="container-fluid">
+    <div class="row">
+        <div class="col-5">
+            <h3>User score: {{userScore}}</h3>
+          </div>
+          <div class="col">
+            <h4>({{roundCount}}/5)</h4>
+          </div>
+          <div class="col-5">
+            <h3 style="float: right;">Computer score: {{computerScore}}</h3>
+          </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-5">
+            <h5>choice: {{userChoice}}</h5>
+          </div>
+          <div class="col">
+          </div>
+          <div class="col-5">
+            <h5 style="float: right;">choice: {{computerChoice}}</h5>
+          </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-4 offset-4">
+            <h3 [hidden]="roundCount != 5">Result: {{result}}</h3>
+        </div>
+  </div>
+    <br>
+    <br>
+    <div class="row">
+          <div class="col-7 offset-2">
+            <input type="text" #textChoice placeholder="Write your choice" class="form-control" id="userchoice" (keyup)="onKey($event)">
+          </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <input class="btn btn-danger col-2 offset-2" type="button" value="Reset"  (click)="reset(); textChoice.value = ''">
+        <input class="btn btn-primary col-2 offset-3" type="button" value="Play"  (click)="play(userChoiceInput); textChoice.value = ''" [disabled]="roundCount == 5 || !['rock', 'paper', 'scissors'].includes(userChoiceInput)">
+    </div>
+ </form>
+
+
