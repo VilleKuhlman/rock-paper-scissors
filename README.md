@@ -1,6 +1,6 @@
 # RockPaperScissors
 
-Modern implementation of classic game 'rock paper scissors' using technologies such as Angular, RxJS and NgRx(store).
+Modern implementation of classic game 'rock paper scissors' using frameworks such as Angular, RxJS and NgRx(store).
 
 1. Enables user to play rock paper scissors against computer
 1. User must provide his choice while computer makes his own
