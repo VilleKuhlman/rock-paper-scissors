@@ -12,4 +12,4 @@ Modern implementation of classic game 'rock paper scissors' using frameworks suc
 
 ### Running the application:
 
-1. Run command 'npm run serve'
+1. Run command 'npm run start'
